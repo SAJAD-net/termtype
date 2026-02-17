@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+*.egg-info/
+dist/
+build/
+
+# Data files (don't commit user data)
+data/
+!data/.gitkeep
+*.db
+*.sqlite
+*.json
+!templates/categories.json
+!templates/*/metadata.json
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
