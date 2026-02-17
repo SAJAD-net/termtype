@@ -20,7 +20,7 @@ pip install termtype
 
 ### From Source
 ```bash
-git clone https://github.com/yourusername/termtype
+git clone https://github.com/SAJAD-net/termtype
 cd termtype
 pip install -e .
 ```
