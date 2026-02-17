@@ -1,0 +1,44 @@
+{
+    "easy": {
+        "name": "Easy Sentences",
+        "description": "Basic English sentences for beginners",
+        "icon": "\ud83c\udf1f",
+        "color": "green"
+    },
+    "medium": {
+        "name": "Medium Difficulty",
+        "description": "Sentences with numbers and data",
+        "icon": "\ud83d\udcca",
+        "color": "yellow"
+    },
+    "hard": {
+        "name": "Hard Difficulty",
+        "description": "Complex sentences with punctuation",
+        "icon": "\ud83d\udd25",
+        "color": "red"
+    },
+    "python": {
+        "name": "Python Code",
+        "description": "Python programming examples with proper indentation",
+        "icon": "\ud83d\udc0d",
+        "color": "blue"
+    },
+    "c_style": {
+        "name": "C-Style Languages",
+        "description": "C, C++, Java, JavaScript examples",
+        "icon": "\u2699\ufe0f",
+        "color": "cyan"
+    },
+    "practice": {
+        "name": "Practice Mode",
+        "description": "Common typing mistakes to practice",
+        "icon": "\ud83c\udfaf",
+        "color": "magenta"
+    },
+    "custom": {
+        "name": "Custom Templates",
+        "description": "Your own custom templates",
+        "icon": "\ud83d\udcdd",
+        "color": "white"
+    }
+}

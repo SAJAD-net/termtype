@@ -1,0 +1,92 @@
+# Python Classes - Object-Oriented Programming
+
+class BankAccount:
+    """A simple bank account class."""
+    
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        self.balance = balance
+        self.transactions = []
+    
+    def deposit(self, amount):
+        """Deposit money into the account."""
+        if amount > 0:
+            self.balance += amount
+            self.transactions.append(f"Deposit: +${amount:.2f}")
+            return True
+        return False
+    
+    def withdraw(self, amount):
+        """Withdraw money from the account."""
+        if 0 < amount <= self.balance:
+            self.balance -= amount
+            self.transactions.append(f"Withdrawal: -${amount:.2f}")
+            return True
+        return False
+    
+    def get_statement(self):
+        """Print account statement."""
+        print(f"\nAccount Owner: {self.owner}")
+        print(f"Current Balance: ${self.balance:.2f}")
+        print("Recent Transactions:")
+        for trans in self.transactions[-5:]:
+            print(f"  {trans}")
+
+# Test the class
+account = BankAccount("Alice Johnson", 1000)
+account.deposit(500)
+account.withdraw(200)
+account.deposit(300)
+account.withdraw(100)
+account.get_statement()
+---
+
+class Student:
+    """Represent a student with grades."""
+    
+    def __init__(self, name, student_id):
+        self.name = name
+        self.student_id = student_id
+        self.grades = {}
+    
+    def add_grade(self, subject, grade):
+        """Add a grade for a subject."""
+        self.grades[subject] = grade
+    
+    def get_average(self):
+        """Calculate average grade."""
+        if not self.grades:
+            return 0
+        return sum(self.grades.values()) / len(self.grades)
+    
+    def get_letter_grade(self):
+        """Convert numeric average to letter grade."""
+        avg = self.get_average()
+        if avg >= 90:
+            return 'A'
+        elif avg >= 80:
+            return 'B'
+        elif avg >= 70:
+            return 'C'
+        elif avg >= 60:
+            return 'D'
+        else:
+            return 'F'
+    
+    def display_info(self):
+        """Display student information."""
+        print(f"\nStudent: {self.name}")
+        print(f"ID: {self.student_id}")
+        print("Grades:")
+        for subject, grade in self.grades.items():
+            print(f"  {subject}: {grade}")
+        print(f"Average: {self.get_average():.1f}")
+        print(f"Letter Grade: {self.get_letter_grade()}")
+
+# Test the class
+student = Student("Bob Smith", "S12345")
+student.add_grade("Math", 85)
+student.add_grade("Science", 92)
+student.add_grade("English", 78)
+student.add_grade("History", 88)
+student.display_info()

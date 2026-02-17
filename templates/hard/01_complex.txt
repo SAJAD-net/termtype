@@ -1,0 +1,28 @@
+# Hard Level - Complex Sentences with Punctuation
+
+The project deadline is March 15th, 2024 at 5:30 PM; please submit all deliverables before then!
+Visit our website at www.example.com for more information, or call us at 555-123-4567.
+---
+
+The meeting agenda: 1) Introductions, 2) Q3 Review, 3) Budget planning, and 4) Next steps...
+Her email address is jane.doe@company.co.uk; please send the files by Friday, March 22nd!
+---
+
+The error message said: 'Fatal exception at address 0x7FFE23B0' - what does that mean?
+Please bring: notebooks, pens, laptop, charger, and your ID badge for security.
+---
+
+According to Section 3, Paragraph 2: "All users must change passwords every 90 days."
+The SHA-256 hash is: 3a7bd3e2f8c9a1b4d6e5f0c2a7b8d9e1f4c5a6b7 - please verify.
+---
+
+For support, email: help@company.com, call: 1-800-555-0199, or visit our FAQ page.
+The coordinates are 40.7128°N, 74.0060°W - the location of New York City.
+---
+
+Please review sections 4.2, 7.3, and 9.1 of the documentation before proceeding.
+The error code was HTTP 404 Not Found; the server returned this at 2024-03-15T10:30:00Z.
+---
+
+The temperature ranged from -5°C to 12°C; it was quite variable, actually.
+The file size is 2.5GB (2,684,354,560 bytes) - please compress if needed.

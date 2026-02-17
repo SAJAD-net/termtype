@@ -1,0 +1,28 @@
+# Dates, Times, and Measurements
+
+The meeting is scheduled for 2024-03-15 at 14:30 UTC.
+Please arrive 15 minutes early on Friday, March 22nd.
+---
+
+The deadline is 2024-12-31 at 11:59 PM.
+The event runs from 9:00 AM to 5:30 PM Monday through Friday.
+---
+
+The package ships within 2-3 business days.
+Delivery takes approximately 5-7 working days.
+The warranty lasts for 24 months from the purchase date.
+---
+
+The distance from New York to Los Angeles is 2,789 miles.
+The building is 450 meters tall with 102 floors.
+The pool is 25 meters long and 10 meters wide.
+---
+
+The recipe requires 250 ml of milk and 3.5 grams of salt.
+Bake at 180°C for 25-30 minutes until golden brown.
+Let the dough rest for 45 minutes before rolling.
+---
+
+The train departs at 08:47 and arrives at 11:32.
+Flight UA123 departs at 10:15 AM from Gate B7.
+Boarding begins 30 minutes before departure time.

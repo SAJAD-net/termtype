@@ -1,0 +1,58 @@
+# Python Functions - Advanced Examples
+
+def fibonacci(n):
+    """Return the nth Fibonacci number."""
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+def fibonacci_sequence(count):
+    """Generate Fibonacci sequence up to count."""
+    sequence = []
+    for i in range(count):
+        sequence.append(fibonacci(i))
+    return sequence
+
+# Test Fibonacci
+result = fibonacci_sequence(10)
+print(f"First 10 Fibonacci numbers: {result}")
+---
+
+def filter_even_numbers(numbers):
+    """Return only even numbers from a list."""
+    return [num for num in numbers if num % 2 == 0]
+
+def square_numbers(numbers):
+    """Return squares of all numbers."""
+    return [num ** 2 for num in numbers]
+
+def process_numbers(numbers):
+    """Apply multiple transformations to numbers."""
+    even = filter_even_numbers(numbers)
+    squares = square_numbers(even)
+    return squares
+
+# Test the functions
+data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+result = process_numbers(data)
+print(f"Original: {data}")
+print(f"Processed: {result}")
+---
+
+def create_multiplier(factor):
+    """Create a multiplier function."""
+    def multiplier(x):
+        return x * factor
+    return multiplier
+
+# Create different multiplier functions
+double = create_multiplier(2)
+triple = create_multiplier(3)
+quadruple = create_multiplier(4)
+
+# Test the closures
+number = 10
+print(f"{number} doubled: {double(number)}")
+print(f"{number} tripled: {triple(number)}")
+print(f"{number} quadrupled: {quadruple(number)}")

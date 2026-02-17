@@ -1,0 +1,84 @@
+# Java Programming Examples
+
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+        
+        // Variables and data types
+        String name = "John Doe";
+        int age = 25;
+        double height = 1.85;
+        boolean isStudent = true;
+        
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Height: " + height);
+        System.out.println("Is Student: " + isStudent);
+    }
+}
+---
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class BankAccount {
+    private String accountNumber;
+    private String ownerName;
+    private double balance;
+    private List<String> transactions;
+    
+    // Constructor
+    public BankAccount(String owner, double initialDeposit) {
+        this.ownerName = owner;
+        this.balance = initialDeposit;
+        this.accountNumber = "ACC" + System.currentTimeMillis();
+        this.transactions = new ArrayList<>();
+        addTransaction("Initial deposit: $" + initialDeposit);
+    }
+    
+    // Deposit money
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            addTransaction("Deposit: +$" + amount);
+        }
+    }
+    
+    // Withdraw money
+    public boolean withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            addTransaction("Withdrawal: -$" + amount);
+            return true;
+        }
+        return false;
+    }
+    
+    // Add transaction
+    private void addTransaction(String description) {
+        transactions.add(description);
+        if (transactions.size() > 10) {
+            transactions.remove(0);
+        }
+    }
+    
+    // Display account info
+    public void displayInfo() {
+        System.out.println("Account Number: " + accountNumber);
+        System.out.println("Owner: " + ownerName);
+        System.out.println("Balance: $" + balance);
+        System.out.println("Recent Transactions:");
+        for (String t : transactions) {
+            System.out.println("  " + t);
+        }
+    }
+    
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount("John Doe", 1000.0);
+        account.deposit(500.0);
+        account.withdraw(200.0);
+        account.deposit(300.0);
+        account.withdraw(100.0);
+        account.displayInfo();
+    }
+}

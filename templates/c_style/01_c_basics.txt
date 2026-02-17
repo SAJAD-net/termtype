@@ -1,0 +1,62 @@
+# C Programming - Basic Examples
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    printf("Hello, World!\n");
+    
+    // Variables and data types
+    int age = 25;
+    float height = 1.85;
+    char grade = 'A';
+    char name[] = "John Doe";
+    
+    printf("Name: %s\n", name);
+    printf("Age: %d\n", age);
+    printf("Height: %.2f\n", height);
+    printf("Grade: %c\n", grade);
+    
+    return 0;
+}
+---
+
+#include <stdio.h>
+
+// Function to calculate factorial
+int factorial(int n) {
+    if (n <= 1) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+
+// Function to check if number is prime
+int is_prime(int n) {
+    if (n <= 1) return 0;
+    if (n <= 3) return 1;
+    if (n % 2 == 0 || n % 3 == 0) return 0;
+    
+    for (int i = 5; i * i <= n; i += 6) {
+        if (n % i == 0 || n % (i + 2) == 0) return 0;
+    }
+    return 1;
+}
+
+int main() {
+    // Test factorial
+    for (int i = 0; i <= 10; i++) {
+        printf("%d! = %d\n", i, factorial(i));
+    }
+    
+    // Test prime numbers
+    printf("\nPrime numbers up to 50:\n");
+    for (int i = 2; i <= 50; i++) {
+        if (is_prime(i)) {
+            printf("%d ", i);
+        }
+    }
+    printf("\n");
+    
+    return 0;
+}

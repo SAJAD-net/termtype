@@ -1,0 +1,50 @@
+# Python Basics - Variables and Functions
+
+def greet_user(name):
+    """Print a personalized greeting."""
+    print(f"Hello, {name}!")
+    print("Welcome to Python programming.")
+
+def calculate_sum(numbers):
+    """Calculate the sum of a list of numbers."""
+    total = 0
+    for num in numbers:
+        total += num
+    return total
+
+# Test the functions
+greet_user("Alice")
+result = calculate_sum([1, 2, 3, 4, 5])
+print(f"The sum is: {result}")
+---
+
+# Working with different data types
+name = "John Doe"
+age = 25
+height = 1.85
+is_student = True
+hobbies = ["reading", "gaming", "coding"]
+person = {"name": name, "age": age, "city": "New York"}
+
+print(f"{name} is {age} years old and {height}m tall")
+print(f"Student status: {is_student}")
+print(f"Hobbies: {', '.join(hobbies)}")
+print(f"City: {person['city']}")
+---
+
+# Simple input validation
+def get_positive_number():
+    """Get a positive number from user input."""
+    while True:
+        try:
+            value = float(input("Enter a positive number: "))
+            if value > 0:
+                return value
+            else:
+                print("Number must be positive!")
+        except ValueError:
+            print("Invalid input! Please enter a number.")
+
+# Test the function
+number = get_positive_number()
+print(f"You entered: {number}")

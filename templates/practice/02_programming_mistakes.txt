@@ -1,0 +1,44 @@
+# Common Programming Syntax Mistakes
+
+Public static void main(String args) (should be: public static void main)
+System.out.println('Hello World') (should be: System.out.println("Hello World"))
+---
+
+if (x = 5) { console.log('equal') } (should be: if (x === 5))
+const myFunction = () => { return true } (common syntax: function myFunction())
+---
+
+for(i=0; i<10; i++){...} (should be: for (let i = 0; i < 10; i++))
+while (x < 10) { x++; } (missing braces style: while (x < 10) x++;)
+---
+
+def function name(): (should be: def function_name():)
+if x > 5: (should be: if x > 5: with proper indentation)
+---
+
+int main() (should include return 0; at the end)
+printf("%d", x) (missing semicolon: printf("%d", x);)
+---
+
+class MyClass { (missing closing brace)
+    constructor() { this.value = 5; }
+(should close the class with another })
+---
+
+SELECT * FORM users (should be: SELECT * FROM users)
+WHERE user_id = '123' (should use prepared statements)
+---
+
+try { 
+    riskyOperation()
+} except Exception: (should be: except Exception: in Python)
+---
+
+if (x = 5) { (C mistake: using = instead of ==)
+    printf("x is five");
+}
+---
+
+while (x < 10); { (extra semicolon)
+    x++;
+}

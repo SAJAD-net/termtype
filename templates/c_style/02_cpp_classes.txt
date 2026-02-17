@@ -1,0 +1,72 @@
+# C++ Classes and Objects
+
+#include <iostream>
+#include <string>
+#include <vector>
+
+class Student {
+private:
+    std::string name;
+    int id;
+    std::vector<double> grades;
+    
+public:
+    // Constructor
+    Student(std::string n, int i) : name(n), id(i) {}
+    
+    // Add a grade
+    void addGrade(double grade) {
+        if (grade >= 0 && grade <= 100) {
+            grades.push_back(grade);
+        }
+    }
+    
+    // Calculate average
+    double getAverage() const {
+        if (grades.empty()) return 0.0;
+        
+        double sum = 0.0;
+        for (double g : grades) {
+            sum += g;
+        }
+        return sum / grades.size();
+    }
+    
+    // Get letter grade
+    char getLetterGrade() const {
+        double avg = getAverage();
+        if (avg >= 90) return 'A';
+        if (avg >= 80) return 'B';
+        if (avg >= 70) return 'C';
+        if (avg >= 60) return 'D';
+        return 'F';
+    }
+    
+    // Display student info
+    void display() const {
+        std::cout << "Student: " << name << " (ID: " << id << ")" << std::endl;
+        std::cout << "Grades: ";
+        for (double g : grades) {
+            std::cout << g << " ";
+        }
+        std::cout << std::endl;
+        std::cout << "Average: " << getAverage() << std::endl;
+        std::cout << "Letter Grade: " << getLetterGrade() << std::endl;
+    }
+};
+
+int main() {
+    // Create a student
+    Student s("Alice Johnson", 12345);
+    
+    // Add some grades
+    s.addGrade(85.5);
+    s.addGrade(92.0);
+    s.addGrade(78.5);
+    s.addGrade(95.0);
+    
+    // Display information
+    s.display();
+    
+    return 0;
+}

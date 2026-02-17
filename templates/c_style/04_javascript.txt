@@ -1,0 +1,89 @@
+# JavaScript/Node.js Examples
+
+// Basic JavaScript functions
+function greetUser(name) {
+    console.log(`Hello, ${name}!`);
+    console.log("Welcome to JavaScript programming.");
+}
+
+function calculateSum(numbers) {
+    let total = 0;
+    for (let num of numbers) {
+        total += num;
+    }
+    return total;
+}
+
+// Test the functions
+greetUser("Alice");
+let result = calculateSum([1, 2, 3, 4, 5]);
+console.log(`The sum is: ${result}`);
+---
+
+// Object-oriented JavaScript
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+        this.hobbies = [];
+    }
+    
+    addHobby(hobby) {
+        this.hobbies.push(hobby);
+    }
+    
+    introduce() {
+        console.log(`Hi, I'm ${this.name} and I'm ${this.age} years old.`);
+        console.log(`My hobbies include: ${this.hobbies.join(', ')}`);
+    }
+    
+    haveBirthday() {
+        this.age++;
+        console.log(`Happy Birthday! Now I'm ${this.age}`);
+    }
+}
+
+// Create and use Person objects
+let person = new Person("Bob", 25);
+person.addHobby("reading");
+person.addHobby("gaming");
+person.addHobby("coding");
+person.introduce();
+person.haveBirthday();
+---
+
+// Async/Await example
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function fetchUserData(userId) {
+    console.log(`Fetching data for user ${userId}...`);
+    await delay(1000); // Simulate network delay
+    
+    // Simulate API response
+    return {
+        id: userId,
+        name: "John Doe",
+        email: "john@example.com",
+        role: "developer"
+    };
+}
+
+async function processUsers() {
+    try {
+        let user1 = await fetchUserData(1);
+        let user2 = await fetchUserData(2);
+        
+        console.log("User 1:", user1);
+        console.log("User 2:", user2);
+        
+        let team = [user1, user2];
+        console.log(`Team has ${team.length} members`);
+    } catch (error) {
+        console.error("Error:", error);
+    }
+}
+
+// Run the async function
+processUsers().then(() => console.log("Done!"));
