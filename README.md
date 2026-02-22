@@ -11,6 +11,12 @@ A feature-rich, customizable typing speed test for the terminal.
 - Code snippets for programmers
 - Cross-platform (Linux, macOS, Windows)
 
+
+# Preview
+<img width="1014" height="646" alt="Image" src="https://github.com/user-attachments/assets/86c2805b-3719-440b-9d96-491dc1611a19" />
+<img width="1014" height="646" alt="Image" src="https://github.com/user-attachments/assets/23db14de-1ec8-4e7b-81e7-4d82a1d9f076" />
+<img width="1014" height="646" alt="Image" src="https://github.com/user-attachments/assets/648c19e5-715d-40f1-8bfd-2d4f9421e6a2" />
+
 ## Installation
 
 ### From PyPI
