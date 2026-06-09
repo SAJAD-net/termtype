@@ -49,8 +49,5 @@ python -m termtype
 
 4- Run TermType and select "Custom Templates"
 
-### Contributing
-See CONTRIBUTING.md for guidelines.
-
 ### License
 MIT License - see LICENSE file.
